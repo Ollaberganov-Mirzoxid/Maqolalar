@@ -37,4 +37,3 @@ agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orq
 
 
 Bazani yaratgandan so'ng yuklab olingan ushbu "Maqolalar" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga tashlang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs".
-/home/khorezm/Pictures/bg.jpeg
