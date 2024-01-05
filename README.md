@@ -9,27 +9,31 @@ xampp dasturini yuklab olgandan so'ng uni kompyuteringizning 'Windows o'rnatilga
 
 agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orqali "Database" ma'lumotlar bazasini yarating nomi:
 
-    "rav"
+-- CREATE DATABASE
+CREATE DATABASE IF NOT EXISTS `yangiliklar` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
-database yaratgandan so'ng ushbu kodlar orqali table yarating:
+-- SELECT DATABASE
+USE `yangiliklar`;
 
-    CREATE TABLE `data` (
-    `id` int(255) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `name` varchar(255) NOT NULL,
-    `email` varchar(255) NOT NULL,
-    `t_number` bigint(255) NOT NULL,
-    `password` varchar(255) NOT NULL
-    )
+-- CREATE TABLE foydalanuvchilar
+CREATE TABLE IF NOT EXISTS `foydalanuvchilar` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ism` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `parol` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-bu table yaratilgandan so'ng ushbu tablaeni ham yarating:
+-- CREATE TABLE maqolalar
+CREATE TABLE IF NOT EXISTS `maqolalar` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sarlavha` varchar(255) NOT NULL,
+  `matn` text NOT NULL,
+  `foydalanuvchi_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `foydalanuvchi_id` (`foydalanuvchi_id`),
+  CONSTRAINT `maqolalar_ibfk_1` FOREIGN KEY (`foydalanuvchi_id`) REFERENCES `foydalanuvchilar` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-    CREATE TABLE `create_jobs` (
-    `id` int(255) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `name` varchar(255) NOT NULL,
-    `jobs_name` varchar(255) NOT NULL,
-    `jobs` varchar(255) NOT NULL,
-    `money` varchar(255) NOT NULL,
-    `description` varchar(10000) NOT NULL
-    ) 
 
 shu ikkala tableni ham yaratgandan so'ng yuklab olingan ushbu "WDK_FANIDAN_MUSTAQIL_ISH" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga tashlang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs".
