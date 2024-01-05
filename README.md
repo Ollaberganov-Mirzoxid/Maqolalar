@@ -7,7 +7,7 @@ xampp dasturini yuklab olgandan so'ng uni kompyuteringizning 'Windows o'rnatilga
 
     http://localhost/phpmyadmin/
     
-agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orqali "Database" ma'lumotlar bazasini yarating nomi:
+agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orqali "Database" ma'lumotlar bazasini yarating:
 
     -- CREATE DATABASE
     CREATE DATABASE IF NOT EXISTS `yangiliklar` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
@@ -36,4 +36,5 @@ agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orq
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-shu ikkala tableni ham yaratgandan so'ng yuklab olingan ushbu "WDK_FANIDAN_MUSTAQIL_ISH" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga tashlang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs".
+Bazani yaratgandan so'ng yuklab olingan ushbu "Maqolalar" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga tashlang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs".
+/home/khorezm/Pictures/bg.jpeg
