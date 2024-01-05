@@ -7,7 +7,8 @@ xampp dasturini yuklab olgandan so'ng uni kompyuteringizning 'Windows o'rnatilga
 
     http://localhost/phpmyadmin/
     
-agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orqali "Database" ma'lumotlar bazasini yarating:
+agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orqali "Database" ma'lumotlar bazasini yarating.
+Ma'lumotlar bazasini SQL kodi orqali ham yaratsa bo'ladi. Buning uchun phpMyAdminga kirasiz va Sahifaning Navbar(Tepa) qismida SQL ni bosasiz va sizga kod yozish uchun compiler ochiladi va shu kodlarni nusxalab joylaysiz.
 
     -- CREATE DATABASE
     CREATE DATABASE IF NOT EXISTS `yangiliklar` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
@@ -34,6 +35,10 @@ agar ishlasa dastur ishga tushgan bo'ladi va shu yerda "Создать БД" orq
       KEY `foydalanuvchi_id` (`foydalanuvchi_id`),
       CONSTRAINT `maqolalar_ibfk_1` FOREIGN KEY (`foydalanuvchi_id`) REFERENCES `foydalanuvchilar` (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+Keyin pastda "Go" ni bosasiz va baza yaratiladi.
 
+Bazani yaratgandan so'ng yuklab olingan ushbu "Maqolalar" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga joylang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs" papkasi. Keyin yana "chrome" yoki shunga o'xshash dasturga kiring va shunday deb yozing:
+        
+    http://localhost/maqolalar/
 
-Bazani yaratgandan so'ng yuklab olingan ushbu "Maqolalar" dasturini boya o'rnatgan "xampp" dasturining "htdocs" papkasiga tashlang. O'sha papkaga kirish uchun "xampp" ni qayerga o'rnatgan bo'lsangiz o'sha yerga boring va xampp dagan papkaga kiring undan keyin ko'p hollarda 6-da turadi "htdocs".
+shu bilan dasturdan foydalana olasiz Raxmat.
