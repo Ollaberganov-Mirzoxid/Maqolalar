@@ -1,9 +1,10 @@
 <?php
 include_once "../includes/header.php";
 include_once "../includes/navbar.php";
-include_once "db_connection.php";
+include_once "../includes/db_connection.php";
 
-session_start(); // Sessionni boshlash
+$msg1 = "";
+$msg2 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $email = $_POST["email"];
