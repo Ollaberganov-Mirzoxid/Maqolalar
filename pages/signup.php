@@ -5,6 +5,8 @@
     <h2>Ro'yxatdan o'tish</h2>
     <!-- Ro'yxatdan o'tish sahifasi ma'lumotlari -->  
     <?php
+    $msg1 = "";
+    $msg2 = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup"])) {
         $ism = $_POST["ism"];
         $email = $_POST["email"];
